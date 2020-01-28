@@ -1,4 +1,4 @@
-# scaleway-instance-provision
+# Scaleway instance provision
 
 ## Requirements
 - [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
