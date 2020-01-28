@@ -1,0 +1,12 @@
+- name: Create server and start it
+  scaleway_compute:
+    name: "{{ item.name }}"
+    state: running
+    image: "{{ item.image }}"
+    region: "{{ item.region }}"
+    commercial_type: "{{ item.commercial_type }}"
+    wait: true
+    organization: "{{ organization }}"
+    api_token: "{{ api_token }}"
+    security_group: "{{ item.security_group }}"
+  loop: "{{ instances.scaleway_compute }}"

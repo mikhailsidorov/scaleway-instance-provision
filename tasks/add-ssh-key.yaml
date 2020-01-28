@@ -1,0 +1,8 @@
+- name: "Add SSH keys"
+  scaleway_sshkey:
+    ssh_pub_key: "{{ item }}"
+    state: "present"
+    api_token: "{{ api_token }}"
+  loop: "{{ admin_ssh_pub_keys }}"
+  when: admin_ssh_pub_keys is defined
+

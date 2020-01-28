@@ -1,0 +1,33 @@
+# List of available images https://api-marketplace.scaleway.com/images
+#
+#image_uuid: "SET VALUE"
+
+
+# Create api token here https://console.scaleway.com/account/credentials
+#
+#api_token: "SET VALUE"
+
+
+# Get organization id using 'scw info' command
+#
+#organization: "SET VALUE"
+
+
+# Cat ~/.ssh/id_rsa.pub
+#
+#admin_ssh_pub_keys:
+#  - "SET VALUE"
+
+
+# Get security group id using 'scw --region=REGION _security-groups list-groups' command
+#
+#security_group: "SET VALUE"
+
+
+# Get commercial_type using 'scw products servers' command
+# region: "ams1" or "par1"
+#
+#instances:
+#  scaleway_compute:
+#    - { name: "host1", image: "{{ image_uuid }}", commercial_type: "DEV1-S", region: "ams1", security_group: "{{ security_group }}" }
+#    - { name: "host2", image: "{{ image_uuid }}", commercial_type: "DEV1-S", region: "ams1", security_group: "{{ security_group }}" }

@@ -1,0 +1,14 @@
+- name: Provision scaleway instances
+  hosts: localhost
+  gather_facts: no
+  vars:
+    favcolor: blue
+  vars_files:
+    - settings.yaml
+
+  tasks:
+    - name: Add ssh keys
+      import_tasks: tasks/add-ssh-key.yaml
+
+    - name: Create and start servers
+      import_tasks: tasks/create-scaleway-compute.yaml
